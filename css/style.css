@@ -1,0 +1,316 @@
+/*tipo de letra de la página*/
+@font-face {
+  font-family: 'Libertinus Mono';
+  src: url('fonts/LibertinusMono-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
+ }
+
+/*Imagen de fondo principal*/
+body{
+    margin: 0;
+    background-image: url(../elementos/fondo.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'libertinus Mono', monospace;
+}
+
+nav > a { /*el > permite que solo se modifique el elemento 'a' dentro de 'nav', los que están fuera del nav no son afectados*/
+    text-decoration: none; /*le saca el subrayado a los links*/
+    color: black; 
+}
+
+a{
+    color: #3f24d6e8;
+}
+/*Menú*/
+header {
+    display: flex; /*permite que se vea de forma horizontal el menú*/
+    min-height: 80px;
+    background-image: url('../elementos/banner1.png');
+    justify-content: space-between; /*ubica los elementos en el eje principal, separa el logo y el título de los títulos del menú*/
+    align-items: center;
+    padding: 10px; /*spara los elementos de su borde*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /*le saca el subrayado a los links*/
+    color:#000000
+
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+nav a {
+    font-size:22px;
+    font-weight: 600; /*les agrega grosor a las palabras*/
+    padding-right: 10px; /*separa los textos entre ellos*/
+}
+
+nav a:hover{
+    color: white; /*hover permite que al pasar el cursor por encima modifique como se ve, en este caso cambia el color a blanco */
+}
+
+/*Texto y elementos dentro del body en la clase contenido*/
+.contenido{
+  display: flex;
+  margin: 5%; /*deja un espacio de margen en el contenedor*/
+  flex-direction: column; /*Permite que los elemento del div queden uno abajo del otro*/
+  justify-content: center; /*centra nuestros elementos en el eje principal. Por defecto el eje principal es en fila*/
+  align-items: center; /*centra nuestros elementos en el eje secundario (Y)*/
+}
+
+p, ul {
+    width: 60%;
+    font-size:18px;
+    line-height:1.6; /*espacio entre lineas*/
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: rgba(44, 44, 102, 0.616);
+    text-shadow: 2px 2px 4px #2e2c3f75;
+}
+
+h2{
+    font-size: 25px;
+    color: #1b1f69;
+}
+
+video{
+	width:100%;
+    max-width: 800px;
+	height:auto;
+}
+
+/*Personajes - Tabla*/
+.tabla{
+    width: 90%;
+    margin: 20px auto; /*crea un margen para la tabla*/
+}
+
+table{
+    width: 100%;
+    background-color: lch(100% 0.01 296.81 / 0.589); /*color general de la tabla*/
+    border-radius: 10px; /*redondea las esquinas*/
+    overflow: hidden; /*para que las esquinas redondeadas funcionen*/
+    box-shadow: 0 4px 15px rgba(67, 58, 99, 0.712); /*sombra del borde exterior de la tabla*/
+}
+
+th{
+    background-color: #43588575;
+    color: rgb(255, 255, 255);
+    padding: 15px; /*crea espacio entre las letras y el encabezado de la tabla*/
+    font-size: 1.2rem;
+}
+caption,
+th {
+    text-align: left;
+}
+td {
+    padding: 15px;
+    border-bottom: 2px solid #ffffff; /*crea un borde por cada fila de la tabla*/
+}
+
+
+/*efecto cebra: permite que una fila este con el color predeterminado de la tabla y que otra tenga un color distinto*/
+tr:nth-of-type(2n) { /*es utilizado para especificar y estilizar las filas que son pares (2da, 4ta, 6ta, etc) dentro de su elemento padre. Normalmente es utilizado para crear tablas con el patron de cebra.*/
+    background: hsla(274, 29%, 89%, 0.308);
+}
+
+/* Efecto Hover: Resalta la fila cuando pasas el mouse */
+tr:hover {
+    background-color: #d3d4e7;
+    transition: background-color 0.3s ease;
+}
+.tabla img{
+    width: 90%; 
+}
+
+
+/*Galeria*/
+.galeria{
+    display: grid;
+    gap: 1.5rem; /*espacio entre imagenes de galeria*/
+    grid-auto-flow: column; /*permite que las imagenes se muestren una al lado de la otra*/
+    grid-auto-columns: 300px;
+    overflow-x: auto; /*crea un scrollbar para la clase galeria*/
+    overscroll-behavior-inline: contain; /*permite que solo se puedan mover los elementos de la barra scroll y no el otro contenido. Es en 'inline' porque nos enfocamos en la axis de inline*/
+    padding: 0 2rem 2rem;
+}
+
+.galeria-element{
+    padding: 1rem;
+    box-shadow: black;
+}
+.galeria-element > img{
+    inline-size: 100%;
+    object-fit: cover; /*para que la imagen no se deforme al cambiar de tamaño*/
+}
+
+.snap-inline {
+    scroll-snap-type: inline mandatory;
+}
+
+.snap-inline > * {
+    scroll-snap-align: start; /*permite que al mover las imagenes con el scroll estas se comporten como las fotos de instagram, en donde pasas de foto a foto*/
+    scroll-padding-inline: 1rem
+}
+
+/*Formulario*/
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color:  #ffffffb7;
+    box-shadow: #43588575;
+    border-radius: 2rem;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.formulario{
+  display: flex;
+  justify-content: center; /*centra nuestros elementos en el eje principal. Por defecto el eje principal es en fila*/
+  padding: 2rem;
+}
+
+/* Estilo especial para el input de color */
+input[type="color"] {
+    height: 50px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+label {
+    color: #1b1f69;
+    font-weight: 600;
+    margin-bottom: 8px; /*deja un espacio entre el label y el input*/
+    margin-top: 5px;
+}
+.btn{
+  font-size: 18px;
+  color:#ffeff6;
+  border:0;
+  border-radius: 25px;
+  background-color: #6e59bd;
+  cursor: pointer;
+}
+
+/* Grupo de Radios (Temporadas) */
+.radio {
+    margin: 6px 0 20px;
+    gap: 10px;
+}
+
+/*al poner el cursor sobre el boton cambia de color*/
+.btn:hover{
+  background-color: #b3325d94;
+
+}
+
+input {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #452e6931;
+  border: 2px solid #4d457c;
+  color:#2d2a5a;
+  outline: none;
+
+}
+/*Responsive: para que se adapte al tamaño de un celular*/
+/*Diseño responsivo para celular*/
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+    .galeria {
+        display: flex;
+        margin: 3%; /*deja un espacio de margen en el contenedor*/
+        flex-direction: column; /*Permite que los elemento del div queden uno abajo del otro*/
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+    }
+
+
+    .contenido p {
+        width: 90%;
+    }
+
+    th {
+        display: none;
+    }
+    td {
+        display: block; /*permite que los datos de td se vean en el eje y (verticalmente)*/
+        padding: .5rem 1rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        display: block; /*permite que los titulos d*/
+        margin-bottom: 2px;
+        text-transform: capitalize;
+    }
+
+    td:first-child {
+        padding-top: 2rem;
+    }
+
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+
+    .tabla img{
+        width: 70%;
+        height: auto;
+        margin-left: 30px; /*deja un margen (espcaio) de 30px a la izquierda, haciendo que la imagen se vea más centrada*/
+    }
+
+
+}
+
+/* tablet */
+@media (min-width: 702px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+    .contenido p {
+        width: 90%;
+    }
+
+    .tabla img{
+        width: 150%; 
+        object-fit: cover;
+        margin-left: -45px; /*permite hacer que la imagen se vaya ligeramente a la ligera*/
+        
+    }
+}
