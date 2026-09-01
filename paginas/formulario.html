@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Fans</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="fondo-general">
+    <header>
+        <a href="../index.html" class="logo">
+            <img src="../elementos/logo.png" alt="logo de link click">
+            <h2 class="nombre-donghua">Link Click</h2>
+        </a>
+        <nav>
+            <a href="../index.html" class="nav-click">Introducción</a>
+            <a href="plataformas.html" class="nav-click">Plataformas</a>
+            <a href="personajes.html" class="nav-click">Personajes</a>
+            <a href="galeria.html" class="nav-click">Galeria</a>
+            <a href="formulario.html" class="nav-click">Formulario</a>
+         </nav>
+    </header>   
+    <div class="contenido">
+        <h1>¡Completa este formulario para entrar al club de fans ٩(ˊᗜˋ*)و ♡!</h1>
+            <div class="formulario">
+                <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+                    <label for ="nombre">Nombre/Apodo:</label> 
+                    <input type="text" name="nombre_control" placeholder="Ingrese su nombre o apodo"/>
+                    
+                    <LABEL for="email">Gmail: </LABEL>
+                    <INPUT type="text" id="email" placeholder="ingrese su gmail">
+                  
+                    <label for="redes sociales">Link a una red social:</label>  
+                    <input type="url" name="url_control" placeholder="instagram, twitter o tik tok" />
+
+                    <label for="fecha">¿Desde que fecha que sigues la serie? (˶˃ ᵕ ˂˶) .ᐟ.ᐟ </label> 
+                    <input type="date" name="fecha_control" />
+
+                    <label for="color">Elige el color de tus ojos cuando activas tu poder</label> 
+                    <input type="color" name="color_control" />
+                    
+                    <label for="personaje">Elige tu personaje favorito:</span></label>
+                    <select id="personaje" name="personaje">
+                        <option value="Chen Xiaoshi">Chen Xiaoshi</option>
+                        <option value="Li Tianchen">Li Tianchen</option>
+                        <option value="Li Tianxi">Li Tianxi</option>
+                        <option value="Qian Jin">Qian Jin</option>
+                        <option value="Liu Xiao">Liu Xiao</option>
+                        <option value="Xia Fei">Xia Fei</option>
+                        <option value="Vein">Vein</option>
+                        <option value="Wang Qing">Wang Qing</option>
+                        <option value="Emma">Emma</option>
+                        <option value="Xu Shanshan">Lu Guang</option>
+                        <option value="Liu Ming">Liu Ming</option>
+                    </select>
+                    <br>
+                    <label for="temporada">Ingresa tu temporada favorita:</label>
+                    <div class="radio">
+                        <INPUT type="radio" name="temporada" value="Temporada 1"> Temporada 1<BR>
+                        <INPUT type="radio" name="temporada" value="Temporada 2"> Temporada 2<BR>
+                        <INPUT type="radio" name="temporada" value="Bridon Arc"> Temporada 3<BR>
+                        <INPUT type="radio" name="temporada" value="Bridon Arc"> Bridon Arc<BR>
+                    </div>
+
+                    <button type="submit" class="btn">¡Unirme al club!</button>
+                </form>
+            </div>               
+    </div>
+</body>
+</html>
